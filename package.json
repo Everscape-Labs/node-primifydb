@@ -1,0 +1,47 @@
+{
+  "name": "node-primifydb",
+  "version": "0.1.0",
+  "description": "NodeJS 6+ driver for the PrimifyDB database",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=latest",
+    "start": "nodemon --exec npm run babel-node -- ./index.js",
+    "basic": "npm run babel-node -- ./test/basic.js",
+    "basicbulk": "npm run babel-node -- ./test/basicBulk.js",
+    "devices": "npm run babel-node -- ./test/devices.js",
+    "build": "babel src -d dist",
+    "mocha": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register --recursive ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Everscape-Labs/node-primifydb.git"
+  },
+  "keywords": [
+    "database",
+    "driver",
+    "primifydb"
+  ],
+  "author": "Johan Leche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Everscape-Labs/node-primifydb/issues"
+  },
+  "homepage": "https://github.com/Everscape-Labs/node-primifydb#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "agentkeepalive": "^3.5.1",
+    "async": "^2.6.1",
+    "chance": "^1.0.16",
+    "got": "^9.0.0",
+    "moment": "^2.22.2",
+    "winston": "^2.4.3"
+  }
+}
