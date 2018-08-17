@@ -1,8 +1,8 @@
 {
   "name": "node-primifydb",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NodeJS 6+ driver for the PrimifyDB database",
-  "main": "index.js",
+  "main": "dist/Primify.js",
   "scripts": {
     "babel-node": "babel-node --presets=latest",
     "start": "nodemon --exec npm run babel-node -- ./index.js",
