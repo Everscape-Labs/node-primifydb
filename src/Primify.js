@@ -125,4 +125,4 @@ class Primify {
   }
 }
 
-export default Primify;
+module.exports = Primify;

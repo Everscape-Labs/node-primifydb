@@ -1,14 +1,17 @@
-import winston from 'winston';
+const winston = require('winston');
 
-export const registerLogger = (level = 'debug') => {
+const registerLogger = (level = 'debug') => {
   // Config of logger system :
   winston.remove(winston.transports.Console);
   winston.add(winston.transports.Console, {
-    level      : process.env.WINSTON || level || 'debug',
+    level: process.env.WINSTON || level || 'debug',
     prettyPrint: true,
-    colorize   : true,
-    timestamp  : true,
+    colorize: true,
+    timestamp: true,
   });
 };
 
-export default winston;
+module.exports = {
+  logger: winston,
+  registerLogger,
+};
