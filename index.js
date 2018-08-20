@@ -1,4 +1,8 @@
-import { registerLogger} from "./src/utils/logger";
-
+const { registerLogger} = require("./src/utils/logger");
+const Primify = require('./src/Primify');
 registerLogger();
+
+module.exports = Primify;
+
+
 
