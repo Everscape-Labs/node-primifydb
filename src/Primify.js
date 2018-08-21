@@ -117,7 +117,7 @@ class Primify {
     })
       .then((response) => {
         console.log('response', response.body);
-        return Promise.resolve();
+        return Promise.resolve(response.body);
       })
       .catch((error) => {
         console.error('GOT ERROR : ', error.stack);
